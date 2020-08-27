@@ -1,24 +1,30 @@
-KPI Preview / "Download XML" (these are identical)
+KoBoCAT XML
 
-<?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:odk="http://www.opendatakit.org/xforms">
+<?xml version="1.0" encoding="utf-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:odk="http://www.opendatakit.org/xforms" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
     <h:title>crazy</h:title>
     <model>
       <instance>
-        <data id="snapshot_xml">
+        <a9QGwQp8GSCPTdeAgsDMem id="a9QGwQp8GSCPTdeAgsDMem" version="vp3QpXgjyaGh8DE289xtaX">
+          <formhub>
+            <uuid/>
+          </formhub>
           <test_question/>
+          <__version__/>
           <meta>
             <instanceID/>
           </meta>
-        </data>
+        </a9QGwQp8GSCPTdeAgsDMem>
       </instance>
-      <bind nodeset="/data/test_question" type="string" calculate="translate(/data/test_question, &quot;abcdef&quot;, &quot;123456&quot;)"/>
-      <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" jr:preload="uid"/>
+      <bind calculate="translate(/data/test_question, &quot;abcdef&quot;, &quot;123456&quot;)" nodeset="/a9QGwQp8GSCPTdeAgsDMem/test_question" type="string"/>
+      <bind calculate="'vp3QpXgjyaGh8DE289xtaX'" nodeset="/a9QGwQp8GSCPTdeAgsDMem/__version__" type="string"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/a9QGwQp8GSCPTdeAgsDMem/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="'3d635475b3c047b3a0998d9af99ea325'" nodeset="/a9QGwQp8GSCPTdeAgsDMem/formhub/uuid" type="string"/>
     </model>
   </h:head>
   <h:body>
-    <input ref="/data/test_question">
+    <input ref="/a9QGwQp8GSCPTdeAgsDMem/test_question">
       <label>this shouldn't work</label>
     </input>
   </h:body>
